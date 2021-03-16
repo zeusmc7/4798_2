@@ -1,0 +1,821 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>INFINITY MTA | Игровой магазин</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
+	<link rel="stylesheet" href="css\font-awesome.css" type="text/css">
+	<link rel="stylesheet" href="css\bootstrap.min.css">
+	<link rel="stylesheet" href="css\owl.theme.css">
+	<link rel="stylesheet" href="css\main.css" type="text/css">
+	<link rel="stylesheet" href="css\media.css" type="text/css">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<script src="js\donate.js"></script>
+</head>
+<body>
+	<div id="toTop"><i class="fa fa-angle-up"></i> наверх</div>
+	<div class="wrapper">
+		<div class="page-container">
+			<div class="logo logo--hidden"></div>
+			<header>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="menu">
+								<a class="menu__link">
+									<span class="menu__title">Игровой магазин</span>
+									<div class="menu__hamb">
+										<span class="menu__hamb-1"></span>
+										<span class="menu__hamb-2"></span>
+									</div>
+								</a>
+								<nav class="navs">
+									<ul class="nav__list">
+										<li class="nav__item">
+											<a class="nav__item-link" href="index-2.html">Главная</a>
+										</li>
+										<li class="nav__item">
+											<a class="nav__item-link" href="news.html">Новости</a>
+										</li>
+										<li class="nav__item">
+											<a class="nav__item-link" href="play.html">Как начать играть</a>
+										</li>
+										<li class="nav__item">
+											<a class="nav__item-link" href="https://forum.infinitymta.ru">Форум</a>
+										</li>
+										<li class="nav__item">
+											<a class="nav__item-link" href="about.html">О проекте</a>
+										</li>
+									</ul>
+								</nav>
+							</div>
+							<div class="nav nav--hidden">
+								<div class="col-md-8 col-md-offset-1">
+									<ul>
+										<li><a href="index-2.html">Главная</a></li>
+										<li><a href="news.html">Новости</a></li>
+										<li><a href="play.html">Как начать играть</a></li>
+										<li><a href="https://forum.infinitymta.ru">Форум</a></li>
+										<li><a href="donate.html" class="active"><span class="x2"></span>Игровой магазин</a></li>
+										<li><a href="about.html">О проекте</a></li>
+									</ul>
+								</div>
+								<div class="col-md-2">
+									<div class="nav_auth">
+										<ul>
+											<li>
+												<a href="donate.html#auth">
+													<i class="login"></i> Войти
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+		</div>
+		<section class="donate donate--hidden">
+			<div class="container">
+				<div class="row">
+					<h2>Игровой магазин</h2>
+					<div id="deadline-messadge">Внимание! Акция закончилась!</div>
+					<div id="clockdiv" style="margin-top: 10px;">
+						<p style="color: #4cd472; font-weight: 600;">До конца акции</p>
+					  <div>
+					    <span class="days"></span>
+					    <div class="smalltext">Дней</div>
+					  </div>
+					  <div>
+					    <span class="hours"></span>
+					    <div class="smalltext">Часов</div>
+					  </div>
+					  <div>
+					    <span class="minutes"></span>
+					    <div class="smalltext">Минут</div>
+					  </div>
+					  <div>
+					    <span class="seconds"></span>
+					    <div class="smalltext">Секунд</div>
+					  </div>
+					</div>
+					<div class="donate-item">
+						<div class="col-md-4">
+							<form method="POST" class="donate" onsubmit="return false;">
+								<div class="over_content" style="display: none;">
+									<a class="close_over">x</a>
+									<h4>Проверьте правильность</h4>
+									<table>
+										<tbody>
+											<tr>
+												<td>Сервер:</td>
+												<td class="serverNumberStr">Server 1</td>
+											</tr>
+											<tr>
+												<td>Сумма пополнения:</td>
+												<td class="paySumResult">100 RUB</td>
+											</tr>
+											<tr>
+												<td>Получатель:</td>
+												<td class="characterNameResult">USERk</td>
+											</tr>
+											<tr>
+												<td>Способ оплаты:</td>
+												<td>Trade MC</td>
+											</tr>
+											<tr>
+												<td>Сумма зачисления:</td>
+												<td class="donateSumResult">14 IC</td>
+											</tr>
+										</tbody>
+									</table>
+									<div style="color: red" class="error"></div>
+									<button onclick="payResultHandler()" name="donate" id="submit" class="btndonate1">Продолжить</button>
+								</div>
+								<div class="donate_over" style="display: none;"></div>
+								<div class="type_donate">
+									<div class="donate_icon">
+										<i class="a-host"></i>
+									</div>
+									<select id="serverNumber" required="">
+										<option selected="" disabled="">Выберите сервер</option>
+										<option value="1">INFINITY MTA | Server 1</option>
+										<option value="2">INFINITY MTA | Server 2</option>
+										<option value="3">INFINITY MTA | Server 3</option>
+									</select>
+								</div>
+								<div class="type_donate">
+									<div class="donate_icon">
+										<i class="a-user"></i>
+									</div>
+									<input class="characterName" type="text" placeholder="Ваш никнейм" autocomplete="" required="">
+								</div>
+								<div class="type_donate">
+									<div class="donate_icon">
+										<i class="a-coin"></i>
+									</div>
+									<input class="paySum" type="text" placeholder="Сумма пополнения (руб.)" autocomplete="" required="">
+								</div>
+								<br><br>
+								<a class="donate_pay" onclick="payHandler()">Оплатить</a>
+							</form>
+						</div>
+						<div class="col-md-8" style="margin-top: -45px;">
+							<div class="">
+								<div class="swiper-container discount-slider" style="padding: 35px 140px 35px 90px; margin: 50px auto;">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="item-discount">
+												<div class="discount-procent">
+													+5% IC
+												</div>
+												<div class="discount-about">
+													при пополнении на сумму более 100 рублей
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="item-discount">
+												<div class="discount-procent">
+													+10% IC
+												</div>
+												<div class="discount-about">
+													при пополнении на сумму более 250 рублей
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="item-discount">
+												<div class="discount-procent">
+													+15% IC
+												</div>
+												<div class="discount-about">
+													при пополнении на сумму более 500 рублей
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="item-discount">
+												<div class="discount-procent">
+													+20% IC
+												</div>
+												<div class="discount-about">
+													при пополнении на сумму более 1000 рублей
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="item-discount">
+												<div class="discount-procent">
+													+25% IC
+												</div>
+												<div class="discount-about">
+													при пополнении на сумму более 3000 рублей
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="item-discount">
+												<div class="discount-procent">
+													+30% IC
+												</div>
+												<div class="discount-about">
+													при пополнении на сумму более 5000 рублей
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="item-discount">
+												<div class="discount-procent">
+													+50% IC
+												</div>
+												<div class="discount-about">
+													при пополнении на сумму более 9000 рублей
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-12" id="main-offers">
+							<div id="wrapper">
+								<div id="left-side">
+									<ul>
+										<li class="money active"></li>
+										<li class="premium"></li>
+									</ul>
+								</div>
+
+								<div id="border"><div id="line" class="one"></div></div>
+
+								<div id="right-side">
+									<div id="first" class="active">
+										<div class="col-md-12">
+											<div class="col-md-4">
+												<a href="donate.html#openWindow1">
+													<div class="item-offers">
+														<div class="offers-name" id="startkits1">
+															Пол шага до 10 миллионов
+														</div>
+														<div class="offers-picture">
+															<img src="images\pay\1.png" alt="">
+														</div>
+														<div class="offers-procent">
+															Экономия 100 Infinity Coins
+														</div>
+														<div class="offers-price">
+															Стоимость: 400 Infinity Coins
+														</div>
+														<table>
+															<tbody>
+																<tr>
+																	<td>Игровая валюта <span>5.000.000₽</span></td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</a>
+											</div>
+											<div class="col-md-4">
+												<a href="donate.html#openWindow2">
+													<div class="item-offers">
+														<div class="offers-name" id="startkits2">
+															10x Миллионер
+														</div>
+														<div class="offers-picture">
+															<img src="images\pay\2.png" alt="">
+														</div>
+														<div class="offers-procent">
+															Экономия 250 Infinity Coins
+														</div>
+														<div class="offers-price">
+															Стоимость: 750 Infinity Coins
+														</div>
+														<table>
+															<tbody>
+																<tr>
+																	<td>Игровая валюта <span>10.000.000₽</span></td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</a>
+											</div>
+											<div class="col-md-4">
+												<a href="donate.html#openWindow3">
+													<div class="item-offers">
+														<div class="offers-name" id="startkits3">
+															10-ю Миллионами больше
+														</div>
+														<div class="offers-picture">
+															<img src="images\pay\3.png" alt="">
+														</div>
+														<div class="offers-procent">
+															Экономия 600 Infinity Coins
+														</div>
+														<div class="offers-price">
+															Стоимость: 1400 Infinity Coins
+														</div>
+														<table>
+															<tbody>
+																<tr>
+																	<td>Игровая валюта <span>20.000.000₽</span></td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</a>
+											</div>
+										</div>
+									</div>
+									<div id="third">
+										<div class="col-md-12">
+											<div class="col-md-4">
+												<a href="donate.html#openWindow4">
+													<div class="item-offers">
+														<div class="offers-name" id="car1">
+															Автомобиль Ferrari Italia
+														</div>
+														<div class="offers-picture">
+															<img src="images\pay\4.png" alt="">
+														</div>
+														<div class="offers-procent">
+															Premium Class
+														</div>
+														<div class="offers-price">
+															Стоимость: 2000 Infinity Coins
+														</div>
+														<table>
+															<tbody>
+																<tr>
+																	<!--<td>Игровая валюта <span>20.000.000₽</span></td>-->
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-12">
+							<div id="all-payment">
+								<h3>Способы оплаты</h3>
+								<ul>
+									<li class="f-rcc">Банковские<br>карты</li>
+									<li class="f-ppr">WM<br>карта</li>
+									<li class="f-rub">Терминалы</li>
+									<li class="f-bnk">Интернет-<br>банкинг</li>
+									<li class="f-sbr">Сбербанк<br>онлайн</li>
+									<li class="f-wmr">WebMoney</li>
+									<li class="f-pcr">Яндекс<br>деньги</li>
+									<li class="f-qiwi"></li>
+									<li class="f-mts">МТС</li>
+									<li class="f-bln">Билайн</li>
+									<li class="f-mgy">МегаФон</li>
+									<li class="f-tly"></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2">
+						<div class="f-logo"></div>
+					</div>
+					<div class="col-md-2 col-md-offset-3">
+							<p>INFINITY MTA © 2018-2019
+						<br>Все права защищены! </p>
+					</div>
+					<!--
+					<div class="col-md-2 col-md-offset-3">
+						<a href="https://vk.com/grinya91" target="_blank"><div class="copyright">
+							Данный сайт создан<br> Григорием Измайловым
+						</div></a>
+					</div> -->
+				</div>
+			</div>
+		</footer>
+		<!-- auth -->
+	<div id="auth" class="overlay">
+		<div class="popup">
+			<a class="close" href="donate.html#">x</a>
+			<div class="content">
+				<form method="POST">
+					<div class="type_auth">
+						<div class="auth_icon">
+							<i class="a-host"></i>
+						</div>
+						<select>
+							<option selected="" disabled="">Выберите сервер</option>
+							<option>INFINITY MTA :: 1 сервер</option>
+							<option>INFINITY MTA :: 2 сервер</option>
+							<option>INFINITY MTA :: 3 сервер</option>
+						</select>
+					</div>
+					<div class="type_auth">
+						<div class="auth_icon">
+							<i class="a-user"></i>
+						</div>
+						<input type="text" placeholder="Ваш никнейм" autocomplete="" required="">
+					</div>
+					<div class="type_auth">
+						<div class="auth_icon">
+							<i class="a-password"></i>
+						</div>
+						<input type="password" placeholder="Ваш пароль" autocomplete="" required="">
+					</div>
+					<input type="submit" value="Войти"><br>
+					<a href="donate.html#">Забыли пароль?</a>
+				</form>
+			</div>
+		</div>
+	</div>
+<!--windowpopup-->
+<!--windowpopup1-->
+	<div id="openWindow1" class="windowpopup">
+		<div>
+			<a href="#close" title="Close" class="closewindow">X</a>
+			<h2>Пол шага до 10 миллионов</h2>
+			<form method="POST" onsubmit="return false;">
+			<div class="startkit_over_content" style="display: none;">
+				<a class="startkit_close_over">x</a>
+				<h4>Проверьте правильность</h4>
+				<table>
+					<tbody>
+						<tr>
+							<td>Сервер:</td>
+							<td class="serverNumberWindowStr1">Server 1</td>
+						</tr>
+						<tr>
+							<td>Сумма пополнения:</td>
+							<td class="paySumResult1">2000 RUB</td>
+						</tr>
+						<tr>
+							<td>Получатель:</td>
+							<td class="characterNameResult1">USER</td>
+						</tr>
+						<tr>
+							<td>Способ оплаты:</td>
+							<td>Trade MC</td>
+						</tr>
+						<tr>
+							<td>Товар:</td>
+							<td class="product1">Старткит</td>
+						</tr>
+					</tbody>
+				</table>
+				<div style="color: red" class="error"></div>
+				<button onclick="payStartkit1ResultHandler()" name="donate" id="submit" class="btnstartkit1">Продолжить</button>
+			</div>
+			<div class="startkit_over" style="display: none;"></div>
+				<div class="type_startkit">
+					<div class="startkit_icon">
+						<i class="a-host"></i>
+					</div>
+					<select id="serverNumberWindow1" required="">
+						<option selected="" disabled="">Выберите сервер</option>
+						<option value="1">INFINITY MTA | Server 1</option>
+						<option value="2">INFINITY MTA | Server 2</option>
+						<option value="3">INFINITY MTA | Server 3</option>
+					</select>
+				</div>
+				<div class="type_startkit">
+					<div class="startkit_icon">
+						<i class="a-user"></i>
+					</div>
+					<input class="characterName" id="characterNameWindow1" type="text" placeholder="Ваш никнейм" autocomplete="" required="">
+				</div>
+				<br><br>
+				<a id="donate_kit" class="startkit_pay" onclick="payStartkit1Handler()">Оплатить</a>
+			</form>
+			<!--<p>Это окно создано одним из самых простых способов. Ничего личного, все просто :)</p>-->
+		</div>			
+	</div>
+<!--windowpopup2-->
+	<div id="openWindow2" class="windowpopup">
+		<div>
+			<a href="#close" title="Close" class="closewindow">X</a>
+			<h2>10x Миллионер</h2>
+			<form method="POST" onsubmit="return false;">
+			<div class="startkit_over_content" style="display: none;">
+				<a class="startkit_close_over">x</a>
+				<h4>Проверьте правильность</h4>
+				<table>
+					<tbody>
+						<tr>
+							<td>Сервер:</td>
+							<td class="serverNumberWindowStr2">Server 1</td>
+						</tr>
+						<tr>
+							<td>Сумма пополнения:</td>
+							<td class="paySumResult2">2000 RUB</td>
+						</tr>
+						<tr>
+							<td>Получатель:</td>
+							<td class="characterNameResult2">USER</td>
+						</tr>
+						<tr>
+							<td>Способ оплаты:</td>
+							<td>Trade MC</td>
+						</tr>
+						<tr>
+							<td>Товар:</td>
+							<td class="product2">Старткит</td>
+						</tr>
+					</tbody>
+				</table>
+				<div style="color: red" class="error"></div>
+				<button onclick="payStartkit2ResultHandler()" name="donate" id="submit" class="btnstartkit1">Продолжить</button>
+			</div>
+			<div class="startkit_over" style="display: none;"></div>
+			<div class="type_startkit">
+				<div class="startkit_icon">
+					<i class="a-host"></i>
+				</div>
+				<select id="serverNumberWindow2" required="">
+					<option selected="" disabled="">Выберите сервер</option>
+					<option value="1">INFINITY MTA | Server 1</option>
+					<option value="2">INFINITY MTA | Server 2</option>
+					<option value="3">INFINITY MTA | Server 3</option>
+				</select>
+			</div>
+			<div class="type_startkit">
+				<div class="startkit_icon">
+					<i class="a-user"></i>
+				</div>
+				<input class="characterName" id="characterNameWindow2" type="text" placeholder="Ваш никнейм" autocomplete="" required="">
+			</div>
+			<br><br>
+			<a id="donate_kit" class="startkit_pay" onclick="payStartkit2Handler()">Оплатить</a>
+			</form>
+			<!--<p>Это окно создано одним из самых простых способов. Ничего личного, все просто :)</p>-->
+		</div>			
+	</div>
+<!--windowpopup3-->
+	<div id="openWindow3" class="windowpopup">
+		<div>
+			<a href="#close" title="Close" class="closewindow">X</a>
+			<h2>10-ю Миллионами больше</h2>
+			<form method="POST" onsubmit="return false;">
+			<div class="startkit_over_content" style="display: none;">
+				<a class="startkit_close_over">x</a>
+				<h4>Проверьте правильность</h4>
+				<table>
+					<tbody>
+						<tr>
+							<td>Сервер:</td>
+							<td class="serverNumberWindowStr3">Server 1</td>
+						</tr>
+						<tr>
+							<td>Сумма пополнения:</td>
+							<td class="paySumResult3">2000 RUB</td>
+						</tr>
+						<tr>
+							<td>Получатель:</td>
+							<td class="characterNameResult3">USER</td>
+						</tr>
+						<tr>
+							<td>Способ оплаты:</td>
+							<td>Trade MC</td>
+						</tr>
+						<tr>
+							<td>Товар:</td>
+							<td class="product3">Старткит</td>
+						</tr>
+					</tbody>
+				</table>
+				<div style="color: red" class="error"></div>
+				<button onclick="payStartkit3ResultHandler()" name="donate" id="submit" class="btnstartkit1">Продолжить</button>
+			</div>
+			<div class="startkit_over" style="display: none;"></div>
+			<div class="type_startkit">
+				<div class="startkit_icon">
+					<i class="a-host"></i>
+				</div>
+				<select id="serverNumberWindow3" required="">
+					<option selected="" disabled="">Выберите сервер</option>
+					<option value="1">INFINITY MTA | Server 1</option>
+					<option value="2">INFINITY MTA | Server 2</option>
+					<option value="3">INFINITY MTA | Server 3</option>
+				</select>
+			</div>
+			<div class="type_startkit">
+				<div class="startkit_icon">
+					<i class="a-user"></i>
+				</div>
+				<input class="characterName" id="characterNameWindow3" type="text" placeholder="Ваш никнейм" autocomplete="" required="">
+			</div>
+			<br><br>
+			<a id="donate_kit" class="startkit_pay" onclick="payStartkit3Handler()">Оплатить</a>
+			</form>
+			<!--<p>Это окно создано одним из самых простых способов. Ничего личного, все просто :)</p>-->
+		</div>			
+	</div>
+<!--windowpopup4-->
+	<div id="openWindow4" class="windowpopup">
+		<div>
+			<a href="#close" title="Close" class="closewindow">X</a>
+			<h2>Автомобиль Ferrari Italia</h2>
+			<form method="POST" onsubmit="return false;">
+			<div class="startkit_over_content" style="display: none;">
+			<a class="startkit_close_over">x</a>
+			<h4>Проверьте правильность</h4>
+			<table>
+				<tbody>
+					<tr>
+						<td>Сервер:</td>
+						<td class="serverNumberWindowStr4">Server 1</td>
+					</tr>
+					<tr>
+						<td>Сумма пополнения:</td>
+						<td class="paySumResult4">2000 RUB</td>
+					</tr>
+					<tr>
+						<td>Получатель:</td>
+						<td class="characterNameResult4">USER</td>
+					</tr>
+					<tr>
+						<td>Способ оплаты:</td>
+						<td>Trade MC</td>
+					</tr>
+					<tr>
+						<td>Товар:</td>
+						<td class="product4">Машина</td>
+					</tr>
+				</tbody>
+			</table>
+			<div style="color: red" class="error"></div>
+			<button onclick="payStartkit4ResultHandler()" name="donate" id="submit" class="btnstartkit1">Продолжить</button>
+		</div>
+		<div class="startkit_over" style="display: none;"></div>
+			<div class="type_startkit">
+				<div class="startkit_icon">
+					<i class="a-host"></i>
+				</div>
+				<select id="serverNumberWindow4" required="">
+					<option selected="" disabled="">Выберите сервер</option>
+					<option value="1">INFINITY MTA | Server 1</option>
+					<option value="2">INFINITY MTA | Server 2</option>
+					<option value="3">INFINITY MTA | Server 3</option>
+				</select>
+			</div>
+			<div class="type_startkit">
+				<div class="startkit_icon">
+					<i class="a-user"></i>
+				</div>
+				<input class="characterName" id="characterNameWindow4" type="text" placeholder="Ваш никнейм" autocomplete="" required="">
+			</div>
+			<br><br>
+			<a id="donate_kit" class="startkit_pay" onclick="payStartkit4Handler()">Оплатить</a>
+			</form>
+			<!--<p>Это окно создано одним из самых простых способов. Ничего личного, все просто :)</p>-->
+		</div>
+	</div>
+
+	<script src="js\jquery.min.js"></script>
+	<script src="js\bootstrap.js"></script>
+	<script src="js\mobile.js"></script>
+	<script src="js\index.js"></script>
+	<script src="js\timer.js"></script>
+	<script>
+	$('.donate_pay').on('click', function(){
+		$('.donate_over').css('display','block');
+		$('.over_content').css('display','block');
+		$('.type_donate').css('display','none');
+		$('.donate_pay').css('display','none');
+		$('.donate').css('padding','40px 40px 10px 40px');
+	});
+	$('.close_over').on('click', function hide(){
+		$('.donate_over').css('display','none');
+		$('.over_content').css('display','none');
+		$('.type_donate').css('display','inline-flex');
+		$('.donate_pay').css('display','initial');
+		$('.donate').css('padding','40px');
+	});
+	</script>
+	<script>
+	$('.startkit_pay').on('click', function(){
+		$('.startkit_over').css('display','block');
+		$('.startkit_over_content').css('display','block');
+		$('.type_startkit').css('display','none');
+		$('.startkit_pay').css('display','none');
+	});
+	$('.startkit_close_over').on('click', function hide(){
+		$('.startkit_over').css('display','none');
+		$('.startkit_over_content').css('display','none');
+		$('.type_startkit').css('display','inline-flex');
+		$('.startkit_pay').css('display','initial');
+	});
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
+	<script>
+	var swiper = new Swiper('.swiper-container', {
+		slidesPerView: 2,
+		loop: true,
+		autoplay: {
+			delay: 5000,
+		},
+		grabCursor: true
+	});
+	</script>
+	<script>
+		$(".money").click(function() {
+		  $(".money").addClass("active");
+		  $(".premium").removeClass("active");
+		  $(".gun").removeClass("active");
+		  $("#line").addClass("one");
+		  $("#line").removeClass("two");
+		  $("#line").removeClass("three");
+		  $("#line").removeClass("four");
+		})
+
+		$(".premium").click(function() {
+		  $(".premium").addClass("active");
+		  $(".money").removeClass("active");
+		  $(".gun").removeClass("active");
+		  $("#line").addClass("two");
+		  $("#line").removeClass("one");
+		  $("#line").removeClass("three");
+		  $("#line").removeClass("four");
+		})
+
+		$(".gun").click(function() {
+		  $(".gun").addClass("active");
+		  $(".money").removeClass("active");
+		  $(".premium").removeClass("active");
+		  $("#line").addClass("three");
+		  $("#line").removeClass("two");
+		  $("#line").removeClass("one");
+		  $("#line").removeClass("four");
+		})
+
+		$(".ship").click(function() {
+		  $(".ship").addClass("active");
+		  $(".ship > .icon").addClass("active");
+		  $(".pay").removeClass("active");
+		  $(".wrap").removeClass("active");
+		  $(".choose").removeClass("active");
+		  $(".pay > .icon").removeClass("active");
+		  $(".wrap > .icon").removeClass("active");
+		  $(".choose > .icon").removeClass("active");
+		  $("#line").addClass("four");
+		  $("#line").removeClass("two");
+		  $("#line").removeClass("three");
+		  $("#line").removeClass("one");
+		})
+
+		$(".money").click(function() {
+		  $("#first").addClass("active");
+		  $("#second").removeClass("active");
+		  $("#third").removeClass("active");
+		  $("#fourth").removeClass("active");
+		})
+
+		$(".gun").click(function() {
+		  $("#first").removeClass("active");
+		  $("#second").addClass("active");
+		  $("#third").removeClass("active");
+		  $("#fourth").removeClass("active");
+		})
+
+		$(".premium").click(function() {
+		  $("#first").removeClass("active");
+		  $("#second").removeClass("active");
+		  $("#third").addClass("active");
+		  $("#fourth").removeClass("active");
+		})
+
+		$(".ship").click(function() {
+		  $("#first").removeClass("active");
+		  $("#second").removeClass("active");
+		  $("#third").removeClass("active");
+		  $("#fourth").addClass("active");
+		})
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/alertify.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/css/alertify.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/css/themes/semantic.min.css">
+	<div class="alertify-notifier ajs-bottom ajs-right"></div>
+	<script src="js\functionality.js"></script>
+	<script>
+		//Functionality.loadDonateX2();
+	</script>
+</body>
+</html>
